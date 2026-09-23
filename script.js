@@ -1,15 +1,10 @@
-/* =========================================================
-   Vanilla JavaScript untuk portfolio
-   Isi: (1) Menu hamburger, (2) Tahun otomatis di footer
-   ========================================================= */
-
 /* ---------- Mengambil elemen dari DOM ---------- */
 const menuToggle = document.getElementById('menu-toggle');
 const nav        = document.getElementById('nav');
 const yearEl     = document.getElementById('year');
 
 /* =========================================================
-   1. MENU HAMBURGER (mobile)
+  1. MENU HAMBURGER (mobile)
    ========================================================= */
 function setMenu(isOpen) {
   nav.classList.toggle('open', isOpen);
@@ -34,7 +29,7 @@ window.matchMedia('(min-width: 768px)').addEventListener('change', (event) => {
 });
 
 /* =========================================================
-   2. TAHUN OTOMATIS DI FOOTER
+  2. TAHUN OTOMATIS DI FOOTER
    ========================================================= */
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
