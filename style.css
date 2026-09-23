@@ -1,0 +1,200 @@
+/* =========================================================
+   1. RESET & GAYA DASAR
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #11151c;
+  color: #e7eaf0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-alt {
+  background-color: #161b24;
+}
+
+/* =========================================================
+   2. HEADER & NAVIGASI
+   ========================================================= */
+.site-header {
+  background-color: #11151c;
+  border-bottom: 1px solid #2b3342;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between; /* Menjaga Logo di kiri & Navigasi di kanan */
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  color: #a0a9ba;
+}
+
+.nav-list a:hover {
+  color: #9db8de;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* =========================================================
+   3. HERO SECTION
+   ========================================================= */
+.hero {
+  padding: 60px 0;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  color: #a0a9ba;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2b3342;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9db8de;
+  color: #11151c;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b6cbe8;
+}
+
+/* =========================================================
+   4. ABOUT SECTION
+   ========================================================= */
+.about-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.about-text,
+.about-skills {
+  flex: 1;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.skills li {
+  background-color: #1a202b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #2b3342;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   5. HISTORY SECTION
+   ========================================================= */
+.history-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.history-card {
+  background-color: #1a202b;
+  border: 1px solid #2b3342;
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(33.333% - 14px);
+  min-width: 250px;
+}
+
+.history-thumb img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.history-body {
+  padding: 15px;
+}
+
+/* =========================================================
+   6. RESPONSIVE (HP)
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero-inner,
+  .about-grid {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .history-card {
+    width: 100%;
+  }
+
+  .nav-list {
+    gap: 10px;
+  }
+}
