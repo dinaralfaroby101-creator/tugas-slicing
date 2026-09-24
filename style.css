@@ -180,6 +180,51 @@ ul {
   padding: 15px;
 }
 
+/* =========================================================
+   6. CONTACT
+   ========================================================= */
+.contact-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background-color: #1a202b;
+  border: 1px solid #2b3342;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contact-card:hover {
+  border-color: #9db8de;
+  transform: translateY(-3px); /* Efek terangkat sedikit saat kursor menempel */
+}
+
+.contact-card h3 {
+  color: #9db8de;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.contact-card p {
+  color: #a0a9ba;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+  /* Aturan CSS HP yang sudah ada sebelumnya... */
+
+  .history-card,
+  .contact-card {
+    width: 100%; /* Kartu kontak akan menyesuaikan lebar HP */
+  }
+}
+
 /* 6. RESPONSIVE (Tampilan Mobile/HP) */
 
 @media (max-width: 768px) {
@@ -245,4 +290,13 @@ ul {
   .nav {
     margin-left: auto;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sesuaikan nilainya dengan tinggi navbar kamu */
+section {
+  scroll-margin-top: 80px; 
 }
