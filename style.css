@@ -1,5 +1,4 @@
 /* 1. RESET & GAYA DASAR */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -127,7 +126,7 @@ ul {
   background-color: #b6cbe8;
 }
 
-/* 4. ABOUT SECTION */
+/* 4. ABOUT */
 
 .about-grid {
   display: flex;
@@ -154,7 +153,7 @@ ul {
   font-size: 0.9rem;
 }
 
-/* 5. HISTORY SECTION */
+/* 5. HISTORY */
 
 .history-grid {
   display: flex;

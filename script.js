@@ -3,9 +3,7 @@ const menuToggle = document.getElementById('menu-toggle');
 const nav        = document.getElementById('nav');
 const yearEl     = document.getElementById('year');
 
-/* =========================================================
-  1. MENU HAMBURGER (mobile)
-   ========================================================= */
+
 function setMenu(isOpen) {
   nav.classList.toggle('open', isOpen);
   menuToggle.setAttribute('aria-expanded', String(isOpen));
@@ -28,9 +26,7 @@ window.matchMedia('(min-width: 768px)').addEventListener('change', (event) => {
   if (event.matches) setMenu(false);
 });
 
-/* =========================================================
-  2. TAHUN OTOMATIS DI FOOTER
-   ========================================================= */
+/*TAHUN OTOMATIS DI FOOTER*/
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
