@@ -216,10 +216,15 @@ ul {
 }
 
 
+@media (max-width: 768px) {
+  /* Aturan CSS HP yang sudah ada sebelumnya... */
+
   .history-card,
   .contact-card {
-    width: 100%; 
+    width: 100%; /* Kartu kontak akan menyesuaikan lebar HP */
   }
+}
+
 /* 6. RESPONSIVE (Tampilan Mobile/HP) */
 
 @media (max-width: 768px) {
