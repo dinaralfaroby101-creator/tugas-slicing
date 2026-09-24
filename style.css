@@ -1,8 +1,13 @@
 /* 1. RESET & GAYA DASAR */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,6 +34,7 @@ ul {
 
 .section {
   padding: 60px 0;
+  scroll-margin-top: 80px;
 }
 
 .section-alt {
@@ -36,6 +42,7 @@ ul {
 }
 
 /* 2. HEADER & NAVIGASI */
+
 .site-header {
   background-color: #11151c;
   border-bottom: 1px solid #2b3342;
@@ -68,15 +75,18 @@ ul {
 
 .nav-list a {
   color: #a0a9ba;
+  transition: color 0.2s ease;
 }
 
-.nav-list a:hover {
+.nav-list a:hover,
+.nav-list a:focus-visible {
   color: #9db8de;
 }
 
 .menu-toggle {
   display: none;
 }
+
 
 /* 3. HERO SECTION */
 
@@ -101,14 +111,13 @@ ul {
   margin-bottom: 20px;
 }
 
-/* PROFIL */
 .avatar {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #2b3342;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .btn {
@@ -120,13 +129,18 @@ ul {
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
   background-color: #b6cbe8;
 }
 
-/* 4. ABOUT */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* 4. ABOUT SECTION */
 
 .about-grid {
   display: flex;
@@ -153,6 +167,7 @@ ul {
   font-size: 0.9rem;
 }
 
+
 /* 5. HISTORY */
 
 .history-grid {
@@ -166,7 +181,7 @@ ul {
   border: 1px solid #2b3342;
   border-radius: 8px;
   overflow: hidden;
-  width: calc(33.333% - 14px);
+  flex: 1 1 calc(33.333% - 14px);
   min-width: 250px;
 }
 
@@ -174,15 +189,15 @@ ul {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
 }
 
 .history-body {
   padding: 15px;
 }
 
-/* =========================================================
-   6. CONTACT
-   ========================================================= */
+/* 6. CONTACT */
+
 .contact-grid {
   display: flex;
   gap: 20px;
@@ -194,14 +209,13 @@ ul {
   border: 1px solid #2b3342;
   border-radius: 8px;
   padding: 20px;
-  flex: 1;
-  min-width: 200px;
-  transition: border-color 0.2s, transform 0.2s;
+  flex: 1 1 200px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .contact-card:hover {
   border-color: #9db8de;
-  transform: translateY(-3px); /* Efek terangkat sedikit saat kursor menempel */
+  transform: translateY(-3px);
 }
 
 .contact-card h3 {
@@ -215,20 +229,9 @@ ul {
   font-size: 0.9rem;
 }
 
-
+/* 7. RESPONSIVE DESIGN  */
+/* Tampilan Mobile & Tablet  */
 @media (max-width: 768px) {
-  /* Aturan CSS HP yang sudah ada sebelumnya... */
-
-  .history-card,
-  .contact-card {
-    width: 100%; /* Kartu kontak akan menyesuaikan lebar HP */
-  }
-}
-
-/* 6. RESPONSIVE (Tampilan Mobile/HP) */
-
-@media (max-width: 768px) {
-  /* Munculkan tombol hamburger di HP */
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -269,19 +272,23 @@ ul {
     gap: 15px;
   }
 
-  .hero-inner,
-  .about-grid {
-    flex-direction: column-reverse;
+  .hero-inner {
+    flex-direction: column-reverse; 
     text-align: center;
   }
 
-  .history-card {
+  .about-grid {
+    flex-direction: column; 
+    text-align: left;
+  }
+
+  .history-card,
+  .contact-card {
     width: 100%;
   }
 }
 
-/* 7. RESPONSIVE (Tampilan Desktop) */
-
+/* Tampilan Desktop (> 768px) */
 @media (min-width: 769px) {
   .header-actions {
     margin-left: 0;
@@ -290,13 +297,4 @@ ul {
   .nav {
     margin-left: auto;
   }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Sesuaikan nilainya dengan tinggi navbar kamu */
-section {
-  scroll-margin-top: 80px; 
 }
